@@ -33,3 +33,10 @@
 /*    padding: 0 2rem;*/
 /*  }*/
 /*}*/
+
+body {
+    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+}
