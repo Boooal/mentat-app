@@ -6,7 +6,7 @@ import WebApp from "@twa-dev/sdk";
 const counter = ref(0);
 const username = computed(() => {
   if (WebApp.initData !== '') {
-    return WebApp.initData.first_name
+    return WebApp.initData.WebAppUser.first_name
   }
   return 'hui znaet kto'
 })
