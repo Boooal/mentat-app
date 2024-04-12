@@ -18,7 +18,7 @@ function incrementCounter() {
 <template>
   <div class="app-container">
     <div class="counter roboto-bold" >{{ counter }}</div>
-    <img @click="incrementCounter" alt="Vue logo" class="ment" src="@/assets/img/sticker.webp" width="512" height="512"/>
+    <img @click="incrementCounter" alt="Vue logo" class="ment" src="@/assets/img/sticker.webp"/>
     <div class="counter">{{ username }}</div>
   </div>
 </template>
@@ -47,8 +47,10 @@ function incrementCounter() {
 
 }
 
-.ment:hover, .ment:active {
+.ment:active {
   scale: 0.9;
+  max-width: 512px;
+  max-height: 512px;
 }
 
 
