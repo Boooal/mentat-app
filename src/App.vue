@@ -32,6 +32,7 @@ function incrementCounter() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .counter {
@@ -46,7 +47,7 @@ function incrementCounter() {
 
 }
 
-.ment:active {
+.ment:hover, .ment:active {
   scale: 0.9;
 }
 
