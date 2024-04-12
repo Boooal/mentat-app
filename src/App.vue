@@ -1,14 +1,12 @@
 <script setup>
 
-import {computed, ref} from "vue";
+import {onMounted, ref} from "vue";
 import WebApp from "@twa-dev/sdk";
 
 const counter = ref(0);
-const username = computed(() => {
-  if (WebApp.initData !== '') {
-    return WebApp.initData.WebAppUser.first_name
-  }
-  return 'hui znaet kto'
+
+onMounted(() => {
+  WebApp.expand();
 })
 
 function incrementCounter() {
