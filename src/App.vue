@@ -1,8 +1,15 @@
 <script setup>
 
-import {ref} from "vue";
+import {computed, ref} from "vue";
+import WebApp from "@twa-dev/sdk";
 
 const counter = ref(0);
+const username = computed(() => {
+  if (WebApp.initData !== '') {
+    return WebApp.initData.first_name
+  }
+  return 'hui znaet kto'
+})
 
 function incrementCounter() {
   counter.value += 1
@@ -14,7 +21,7 @@ function incrementCounter() {
   <div class="app-container">
     <div class="counter roboto-bold" >{{ counter }}</div>
     <img @click="incrementCounter" alt="Vue logo" class="ment" src="@/assets/img/sticker.webp" width="512" height="512"/>
-
+    <div class="counter">{{ username }}</div>
   </div>
 </template>
 
